@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全球旅人 | 獨角獸旅遊入口網</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+        
+        body { font-family: 'Noto Sans TC', sans-serif; scroll-behavior: smooth; overflow-x: hidden; }
+        .serif { font-family: 'Playfair Display', serif; }
+        
+        /* 視差背景效果 */
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        /* 首頁背景圖 */
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+        }
+
+        /* 卡片懸浮動畫 */
+        .travel-card { transition: all 0.4s ease; display: block; }
+        .travel-card:hover { transform: translateY(-10px); }
+
+        /* 背景右側淡粉紅獨角獸圖騰 */
+        .side-totem {
+            position: fixed;
+            right: -5%;
+            top: 20%;
+            font-size: 35rem;
+            color: #fce7f3; /* 淺粉紅 */
+            opacity: 0.15;
+            z-index: -1;
+            pointer-events: none;
+            transform: rotate(-10deg);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <i class="fa-solid fa-horse-head side-totem"></i>
+
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="bg-pink-100 p-2 rounded-full shadow-inner">
+                    <i class="fa-solid fa-horse-head text-2xl text-pink-500"></i>
+                </div>
+                <div class="text-2xl font-bold tracking-widest text-blue-900 serif italic">Unicorn Travel</div>
+            </div>
+            
+            <div class="hidden md:flex space-x-10 text-sm font-bold uppercase tracking-widest">
+                <a href="#destinations" class="hover:text-blue-600 transition">快速導覽</a>
+                <a href="#miffy" class="hover:text-blue-600 transition">米菲大理</a>
+                <a href="#tools" class="hover:text-blue-600 transition">預訂工具集</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="parallax hero-bg h-screen flex flex-col items-center justify-center text-center text-white relative">
+        <div class="px-6 relative z-10">
+            <h1 class="text-6xl md:text-8xl font-bold mb-6 serif italic drop-shadow-2xl">Adventure Awaits</h1>
+            <p class="text-xl md:text-2xl font-light mb-12 tracking-[0.3em] opacity-90 text-blue-50">開啟你的奇幻全球探索地圖</p>
+            <a href="#destinations" class="bg-white text-blue-900 px-12 py-4 rounded-full font-bold hover:bg-blue-900 hover:text-white transition-all duration-300 shadow-xl">開始探索</a>
+        </div>
+    </section>
+
+    <section id="destinations" class="py-24 max-w-7xl mx-auto px-6 relative">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold mb-4 serif italic text-blue-900">Unicorn's Hotspots</h2>
+            <div class="w-16 h-1 bg-blue-600 mx-auto mb-4"></div>
+            <p class="text-gray-400">World Destinations</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <a href="https://www.japan.travel/tw/tw/" target="_blank" class="travel-card rounded-2xl overflow-hidden bg-white shadow-lg border border-gray-100">
+                <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="日本" class="h-64 w-full object-cover">
+                <div class="p-8 text-center">
+                    <h3 class="text-2xl font-bold mb-2 serif text-gray-800">JAPAN 日本</h3>
+                    <p class="text-sm text-gray-500">日本賞的風景道路</p>
+                </div>
+            </a>
+
+            <a href="https://www.tattpe.org.tw/" target="_blank" class="travel-card rounded-2xl overflow-hidden bg-white shadow-lg border border-gray-100">
+                <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="泰國" class="h-64 w-full object-cover">
+                <div class="p-8 text-center">
+                    <h3 class="text-2xl font-bold mb-2 serif text-gray-800">THAILAND 泰國</h3>
+                    <p class="text-sm text-gray-500">開啟你的奇遇泰國</p>
+                </div>
+            </a>
+
+            <a href="https://www.myswitzerland.com/zh-hant/" target="_blank" class="travel-card rounded-2xl overflow-hidden bg-white shadow-lg border border-gray-100">
+                <img src="https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="瑞士" class="h-64 w-full object-cover">
+                <div class="p-8 text-center">
+                    <h3 class="text-2xl font-bold mb-2 serif text-gray-800">SWISS 瑞士</h3>
+                    <p class="text-sm text-gray-500">瑞士是個年慶樂瑞的地方</p>
+                </div>
+            </a>
+
+            <a href="https://tw.trip.com/travel-guide/destination/europe-120002/" target="_blank" class="travel-card rounded-2xl overflow-hidden bg-white shadow-lg border border-gray-100">
+                <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="歐洲" class="h-64 w-full object-cover">
+                <div class="p-8 text-center">
+                    <h3 class="text-2xl font-bold mb-2 serif text-gray-800">EUROPE 歐洲</h3>
+                    <p class="text-sm text-gray-500">走進古典藝術與浪漫童話</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section id="miffy" class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-8 serif italic text-blue-900">Special Feature: Dali</h2>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="w-full md:w-1/2 rounded-3xl overflow-hidden shadow-2xl relative group">
+                    <img src="https://i.ytimg.com/vi/UdWBqy3O2FI/maxresdefault.jpg" alt="大理" class="w-full transition duration-500 group-hover:scale-105">
+                    <a href="https://www.youtube.com/watch?v=UdWBqy3O2FI" target="_blank" class="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 group-hover:opacity-100 transition">
+                        <i class="fab fa-youtube text-6xl text-red-600"></i>
+                    </a>
+                </div>
+                <div class="w-full md:w-1/2 space-y-4">
+                    <p class="text-gray-600 text-lg leading-relaxed font-light">開啟你的奇幻全球探索地圖</p>
+                    <div class="flex items-center space-x-3 text-blue-900">
+                        <i class="fas fa-hotel"></i> <span>三月街亞朵酒店：文藝與質感並存</span>
+                    </div>
+                    <div class="flex items-center space-x-3 text-blue-900">
+                        <i class="fas fa-utensils"></i> <span>野生菌火鍋：鮮美極致的在地味覺</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tools" class="py-24 max-w-5xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-12 italic serif tracking-widest text-blue-900">Booking Tools</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <a href="https://tw.trip.com/" target="_blank" class="p-8 bg-white rounded-2xl shadow-sm hover:shadow-xl transition group">
+                <i class="fas fa-plane text-blue-900 text-3xl mb-4 group-hover:scale-110 transition"></i>
+                <div class="font-bold text-blue-900">訂機票</div>
+            </a>
+            <a href="https://www.booking.com/index.zh-tw.html" target="_blank" class="p-8 bg-white rounded-2xl shadow-sm hover:shadow-xl transition group">
+                <i class="fas fa-bed text-blue-900 text-3xl mb-4 group-hover:scale-110 transition"></i>
+                <div class="font-bold text-blue-900">訂房</div>
+            </a>
+            <a href="https://www.klook.com/zh-TW/" target="_blank" class="p-8 bg-white rounded-2xl shadow-sm hover:shadow-xl transition group">
+                <i class="fas fa-ticket-alt text-blue-900 text-3xl mb-4 group-hover:scale-110 transition"></i>
+                <div class="font-bold text-blue-900">買門票</div>
+            </a>
+            <a href="https://www.skyscanner.com.tw/" target="_blank" class="p-8 bg-white rounded-2xl shadow-sm hover:shadow-xl transition group">
+                <i class="fas fa-search-dollar text-blue-900 text-3xl mb-4 group-hover:scale-110 transition"></i>
+                <div class="font-bold text-blue-900">機票比價</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-500 py-12 px-6 text-center text-xs tracking-widest">
+        <p>© 2026 UNICORN WORLD TRAVEL. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+</body>
+</html>
